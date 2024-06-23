@@ -1,5 +1,5 @@
 fn main() {
-    let name: &str = "Juan";
-    let age: u8 = 32;
-    println!("Hello, I'm {} and I am {} years old!", name, age);
+    let min: i8 = -15;
+    let max: u8 = 35;
+    println!("The minimum temperature in Madison is {}, and the max temperature is {}", min, max);
 }
