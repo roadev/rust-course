@@ -1,5 +1,9 @@
 fn main() {
-    let min: i8 = -15;
-    let max: u8 = 35;
-    println!("The minimum temperature in Madison is {}, and the max temperature is {}", min, max);
+    println!("Please enter your name: ");
+
+    let mut name: String = String::new();
+
+    std::io::stdin().read_line(&mut name).unwrap();
+
+    println!("Hi, Welcome {}", name);
 }
