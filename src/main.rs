@@ -1,20 +1,23 @@
 fn main() {
-    println!("Please enter your name: ");
+    let number_1 = 120;
+    let number_2 = 321;
 
-    let mut name: String = String::new();
-    std::io::stdin().read_line(&mut name).unwrap();
-    name = name.trim().to_string();
+    let sum = number_1 + number_2;
 
-    println!("Please enter your age: ");
+    loop {
+        println!("Please enter de result of {} + {}: ", number_1, number_2);
 
-    let mut age: String = String::new();
-    std::io::stdin().read_line(&mut age).unwrap();
+        let mut sum_user = String::new();
+        std::io::stdin().read_line(&mut sum_user).unwrap();
 
-    // Get age from console
+        let sum_user_int : i32 = sum_user.trim().parse().unwrap();
 
-    // Convert age to number
+        if sum_user_int == sum {
+            println!("Nice! the result {} is correct", sum);
+            break;
+        } else {
+            println!("The result {} is incorrect, try again", sum_user_int);
+        }
+    }
 
-    let age_int: u8 = age.trim().parse().unwrap();
-
-    println!("Hi, Welcome {}, you are {} years old", name, age_int);
 }
